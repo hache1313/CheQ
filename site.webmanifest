@@ -1,0 +1,17 @@
+{
+  "name": "CHEQ",
+  "short_name": "CHEQ",
+  "description": "Estado de vivienda documentado.",
+  "start_url": "./",
+  "display": "standalone",
+  "background_color": "#F6F5F1",
+  "theme_color": "#3E4F46",
+  "icons": [
+    {
+      "src": "assets/icons/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    }
+  ]
+}
