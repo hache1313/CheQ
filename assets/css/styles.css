@@ -41,3 +41,12 @@ footer{background:#102018;color:#D6DFD8;padding:52px 0 30px}.footer-grid{display
 @media (max-width:960px){.nav-links a:not(.btn){display:none}.hero-grid,.benefits,.report,.faq-wrap{grid-template-columns:1fr}.hero{padding-top:46px}.hero-photo{max-height:560px}.steps{grid-template-columns:repeat(2,1fr)}.pricing{grid-template-columns:1fr}.report-card{max-width:600px}.benefits{gap:40px}}
 @media (max-width:640px){.wrap{width:min(100% - 28px,var(--max))}.nav{height:68px}.nav-links{display:none}.mobile-cta{display:inline-flex}h1{font-size:clamp(2.8rem,14vw,4.4rem)}.hero{padding:38px 0 58px}.hero-grid{gap:34px}.trust-row,.steps,.benefit-grid,.report-metrics,.form-grid{grid-template-columns:1fr}.trust-row{gap:12px}.hero-photo,.bed-photo{aspect-ratio:4/3}section{padding:66px 0}.report{padding:28px}.cta{padding:32px 24px;align-items:flex-start;flex-direction:column}.footer-grid{grid-template-columns:1fr}.actions .btn{width:100%}.field.full{grid-column:auto}}
 @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}}
+
+
+/* Selector de vídeos del hero */
+.hero-photo{position:relative;overflow:hidden;display:flex;flex-direction:column;justify-content:flex-end;gap:12px;background:var(--ink);}
+.hero-video{display:block;width:100%;height:100%;min-height:286px;object-fit:cover;border-radius:inherit;background:#24322d;}
+.room-selector{align-self:flex-start;display:flex;align-items:center;gap:10px;margin:0 16px 0;padding:9px 12px;border-radius:999px;background:rgba(255,255,255,.94);color:var(--ink);font-size:.78rem;font-weight:700;box-shadow:0 8px 20px rgba(0,0,0,.12);}
+.room-selector select{border:0;background:transparent;color:var(--ink);font:inherit;font-weight:800;cursor:pointer;outline:none;}
+.hero-photo .photo-badge{position:relative;inset:auto;margin:0 16px 16px;}
+@media (max-width:640px){.hero-video{min-height:240px}.room-selector{align-self:stretch;justify-content:space-between;margin-inline:12px}.hero-photo .photo-badge{margin-inline:12px;margin-bottom:12px;}}
