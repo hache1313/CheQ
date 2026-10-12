@@ -88,3 +88,25 @@
     });
   }
 })();
+
+
+// Selector de estancia del hero
+(() => {
+  const select = document.getElementById('room-select');
+  const video = document.getElementById('room-video');
+  if (!select || !video) return;
+  const videos = {
+    salon: 'assets/videos/salon.mp4',
+    cocina: 'assets/videos/cocina.mp4',
+    bano: 'assets/videos/bano.mp4',
+    hdormitorio: 'assets/videos/hdormitorio.mp4'
+  };
+  select.addEventListener('change', () => {
+    const source = video.querySelector('source');
+    const nextVideo = videos[select.value];
+    if (!source || !nextVideo) return;
+    source.src = nextVideo;
+    video.load();
+    video.play().catch(() => {});
+  });
+})();
