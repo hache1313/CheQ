@@ -99,7 +99,8 @@
     salon: 'assets/videos/salon.mp4',
     cocina: 'assets/videos/cocina.mp4',
     bano: 'assets/videos/bano.mp4',
-    hdormitorio: 'assets/videos/dormitorio.mp4'
+    hdormitorio: 'assets/videos/dormitorio.mp4',
+    reporte: 'assets/videos/Reporte.mp4'
   };
   select.addEventListener('change', () => {
     const source = video.querySelector('source');
