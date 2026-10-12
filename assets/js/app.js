@@ -28,7 +28,6 @@
   const form = document.getElementById('request-form');
   const output = document.getElementById('request-output');
   const copyButton = document.getElementById('copy-request');
-  const downloadButton = document.getElementById('download-request');
 
   const buildRequest = () => {
     const data = new FormData(form);
