@@ -48,12 +48,25 @@
   };
 
   if (form && output) {
-    form.addEventListener('submit', (event) => {
+    form.addEventListener('submit', async (event) => {
       event.preventDefault();
       if (!form.reportValidity()) return;
-      output.textContent = buildRequest();
-      output.classList.add('visible');
-      output.focus();
+      const submitButton = form.querySelector('button[type="submit"]');
+      if (submitButton) { submitButton.disabled = true; submitButton.textContent = 'Enviando…'; }
+      try {
+        const response = await fetch(form.action, { method: 'POST', body: new FormData(form), headers: { Accept: 'application/json' } });
+        if (!response.ok) throw new Error('No se pudo enviar');
+        output.textContent = 'Solicitud enviada correctamente. Te contactaremos lo antes posible.';
+        output.classList.add('visible');
+        output.focus();
+        form.reset();
+      } catch (error) {
+        output.textContent = 'No se ha podido enviar la solicitud. Puedes copiarla o descargarla y escribirnos a Cheqinmo@gmail.com.';
+        output.classList.add('visible');
+        output.focus();
+      } finally {
+        if (submitButton) { submitButton.disabled = false; submitButton.textContent = 'Preparar solicitud'; }
+      }
     });
   }
 
